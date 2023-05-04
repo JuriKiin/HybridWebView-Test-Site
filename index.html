@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debug Android WebView</title>
+    <link rel="stylesheet" href="https://jurikiin.com/KiinStyle/css/kiinStyle.css">
+</head>
+<body>
+    <section class="center pad-5 grid-1 bg-water">
+        <button class="margin-10p pad-10p align-center" onclick="bridge.testAsync()">Test Async</button>
+        <button class="margin-10p pad-10p align-center" onclick="bridge.testSync()">Test Sync</button>
+        <button class="margin-10p pad-10p align-center" onclick="bridge.testNetworkError()">Test Network Error</button>
+    </section>
+
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>

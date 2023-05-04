@@ -1,11 +1,13 @@
 let bridge = {
     testAsync: () => {
-        Hybrid.testAsync("Hello, Native!", "bridge.testCallback");
+        Hybrid.getAsyncPromise().then((res) => {
+            Hybrid.showToast(res);
+        })
     },
     testSync: () => {
         Hybrid.showToast("Hello World!");
     },
     testCallback: (message) => {
         Hybrid.showToast(message);
-    },
+    }
 }

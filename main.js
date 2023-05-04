@@ -1,6 +1,6 @@
 let bridge = {
     testAsync: () => {
-        Hybrid.testAsync("Hello, Native!", 'testCallback');
+        Hybrid.testAsync("Hello, Native!", 'bridge.testCallback', 'string');
     },
     testSync: () => {
         Hybrid.showToast("Hello World!");

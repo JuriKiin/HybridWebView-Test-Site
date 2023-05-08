@@ -2,9 +2,9 @@ let bridge = {
     testWebImplementation: () => {
         window.hybrid.registerUserForPushNotifications(userId, (error, result) => {
             if (error) {
-              window.hybrid.errorFunc(error);
+              window.hybrid.showToast(error);
             } else {
-              window.hybrid.userCompletedPushNotificationPermissionRequest(result || '');
+              window.hybrid.showToast(result || '');
             }
         });
     },

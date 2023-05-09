@@ -1,5 +1,5 @@
 let bridge = {
-    testWebImplementation: () => {
+    testWebImplementation: (userId) => {
         registerUserForPushNotifications(userId, (error, result) => {
             if (error) {
               window.hybrid.showToast(error);

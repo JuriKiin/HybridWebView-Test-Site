@@ -9,15 +9,15 @@ let bridge = {
         });
     },
     testAsync: () => {
-        Hybrid.getAsyncPromise().then((res) => {
-            Hybrid.showToast(res);
+        window.hybrid.getAsyncPromise().then((res) => {
+            window.hybrid.showToast(res);
         })
     },
     testSync: () => {
-        Hybrid.showToast("Hello World!");
+        window.hybrid.showToast("Hello World!");
     },
     testCallback: (message) => {
-        Hybrid.showToast(message);
+        window.hybrid.showToast(message);
     }
 }
 

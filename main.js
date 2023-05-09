@@ -1,6 +1,6 @@
 let bridge = {
     testWebImplementation: () => {
-        window.hybrid.registerUserForPushNotifications(userId, (error, result) => {
+        registerUserForPushNotifications(userId, (error, result) => {
             if (error) {
               window.hybrid.showToast(error);
             } else {
@@ -19,4 +19,9 @@ let bridge = {
     testCallback: (message) => {
         Hybrid.showToast(message);
     }
+}
+
+function registerUserForPushNotifications(userId, callback) {
+    //if using web, web provides implementation here
+    //if using mobile, modile will override/inject implementation
 }

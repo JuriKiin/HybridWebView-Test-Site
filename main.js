@@ -19,7 +19,7 @@ let bridge = {
     }
 }
 
-function registerUserForPushNotifications(userId, callback) {
+window.registerUserForPushNotifications = (userId, callback) => {
     //if using web, web provides implementation here
     //if using mobile, modile will override/inject implementation
     window.hybrid.showToast("This will be overwritten")

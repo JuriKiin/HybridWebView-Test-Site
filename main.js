@@ -9,9 +9,7 @@ let bridge = {
         });
     },
     testAsync: () => {
-        window.hybrid.getAsyncPromise().then((res) => {
-            window.hybrid.showToast(res);
-        })
+        window.hybrid.testAsync("Message from web", 'testSync');
     },
     testSync: () => {
         window.hybrid.showToast("Hello World!");

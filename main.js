@@ -1,4 +1,7 @@
 let bridge = {
+    removeDOM: () => {
+        document.querySelector('.loader').remove();
+    },
     testWebImplementation: (userId) => {
         registerUserForPushNotifications(userId, (result) => {
             let message = result != null ? result : "Error"

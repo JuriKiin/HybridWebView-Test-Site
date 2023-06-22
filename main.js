@@ -14,6 +14,9 @@ let bridge = {
     testSync: () => {
         window.hybrid.showToast("Hello World!");
     },
+    testSubDomainInterface: () => {
+        window.hybrid.sampleName.showToast("Subdomain Test");
+    }
 }
 
 window.registerUserForPushNotifications = (userId, callback) => {

@@ -2,17 +2,17 @@ let bridge = {
     testWebImplementation: (userId) => {
         registerUserForPushNotifications(userId, (result) => {
             let message = result != null ? result : "Error"
-            window.hybrid.showToast(message)
+            window.hybrid.sampleName.showToast(message)
         });
     },
     testAsyncError: (userId) => {
         asyncError(userId, (result) => {
             let message = result != null ? result : "Error"
-            window.hybrid.showToast(message)
+            window.hybrid.sampleName.showToast(message)
         });
     },
     testSync: () => {
-        window.hybrid.showToast("Hello World!");
+        window.hybrid.sampleName.showToast("Hello World!");
     },
 }
 

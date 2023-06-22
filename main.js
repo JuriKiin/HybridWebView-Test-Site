@@ -5,20 +5,17 @@ let bridge = {
     testWebImplementation: (userId) => {
         registerUserForPushNotifications(userId, (result) => {
             let message = result != null ? result : "Error"
-            window.hybrid.showToast(message)
+            window.sampleName.showToast(message)
         });
     },
     testAsyncError: (userId) => {
         asyncError(userId, (result) => {
             let message = result != null ? result : "Error"
-            window.hybrid.showToast(message)
+            window.sampleName.showToast(message)
         });
     },
     testSync: () => {
-        window.hybrid.showToast("Hello World!");
-    },
-    testSubDomainInterface: () => {
-        window.hybrid.sampleName.showToast("Subdomain Test");
+        window.sampleName.showToast("Hello World!");
     }
 }
 

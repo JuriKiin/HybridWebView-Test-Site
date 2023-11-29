@@ -29,13 +29,28 @@
         } 
     </style>
 </head>
-<body>
-    <span class="loader"></span>
-    <section class="center pad-5 grid-1 bg-water">
-        <button class="margin-10p pad-10p align-center" onclick="bridge.testWebImplementation(1)">Async</button>
-        <button class="margin-10p pad-10p align-center" onclick="bridge.testAsyncError(1)">Async Error</button>
-        <button class="margin-10p pad-10p align-center" onclick="bridge.testSync()">Sync</button>
-        <button class="margin-10p pad-10p align-center" onclick="bridge.removeDOM()">Remove Spinner</button>
+<body class="pad-0 margin-0">
+    <section class="margin-20 pad-5 grid-1 item-50 bg-water">
+        <h1 class="font-lg snow font-header">Native Bridge</h1>
+        <button class="margin-10p pad-10p item-100 align-center" onclick="callAsync(1)">Async</button>
+        <button class="margin-10p pad-10p item-100 align-center" onclick="callAsyncError(1)">Async Error</button>
+        <button class="margin-10p pad-10p item-100 align-center" onclick="callSync()">Sync</button>
+        <button class="margin-10p pad-10p item-100 align-center" onclick="removeDOM()">Remove Spinner</button>
+        <p class="snow font-text font-sm">The below animation demonstrates async communication without blocking the main UI thread</p>
+        <span class="loader margin-top-10p"></span>
+    </section>
+
+    <section class="fixed pad-10p item-100" style="bottom: 0; background-color: #D3D3D3;">
+        <h1 class="font-header">Customize</h1>
+        <div class="d-block pad-10p">
+            <label for="endpoint">JS Endpoint Name:</label>
+            <input type="text" placeholder="endpoint" id="endpoint" oninput="updateEndpointName()">
+        </div>
+        <div class="d-block pad-10p">
+            <label for="url">Load URL</label>
+            <input type="url" placeholder="https://example.com" id="url">
+            <button onclick="loadUrl()">Load</button>
+        </div>
     </section>
 
     <script type="text/javascript" src="./main.js"></script>
